@@ -54,7 +54,7 @@ class WhackSlot: SKNode {
             charNode.name = "charEnemy"
         }
         if let particle = SKEmitterNode(fileNamed: "pinguin"){
-            particle.position = charNode.position
+            particle.position = CGPoint(x: charNode.position.x, y: charNode.position.y + 100)
             addChild(particle)
         }
         
@@ -67,6 +67,10 @@ class WhackSlot: SKNode {
     // HIDE PINGUIN
     func hide() {
         if !isVisible { return }
+        if let particle = SKEmitterNode(fileNamed: "pinguin"){
+            particle.position = CGPoint(x: charNode.position.x, y: charNode.position.y)
+            addChild(particle)
+        }
         charNode.run(SKAction.moveBy(x: 0, y: -80, duration: 0.05))
         isVisible = false
     }
