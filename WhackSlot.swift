@@ -53,6 +53,10 @@ class WhackSlot: SKNode {
             charNode.texture = SKTexture(imageNamed: "penguinEvil")
             charNode.name = "charEnemy"
         }
+        if let particle = SKEmitterNode(fileNamed: "pinguin"){
+            particle.position = charNode.position
+            addChild(particle)
+        }
         
         // HIDE PINGUIN AFTER TIME
         DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 3.5)) { [weak self] in

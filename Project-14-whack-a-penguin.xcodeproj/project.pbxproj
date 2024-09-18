@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2192872C9A7BDE00D96C07 /* hitPinguin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B2192862C9A7BDE00D96C07 /* hitPinguin.sks */; };
+		1B2192892C9A7F6700D96C07 /* pinguin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1B2192882C9A7F6700D96C07 /* pinguin.sks */; };
 		1BF0648E2C962199006A046E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0648D2C962199006A046E /* AppDelegate.swift */; };
 		1BF064902C962199006A046E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1BF0648F2C962199006A046E /* GameScene.sks */; };
 		1BF064942C962199006A046E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF064932C962199006A046E /* GameScene.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B2192862C9A7BDE00D96C07 /* hitPinguin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPinguin.sks; sourceTree = "<group>"; };
+		1B2192882C9A7F6700D96C07 /* pinguin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = pinguin.sks; sourceTree = "<group>"; };
 		1BF0648A2C962198006A046E /* Project-14-whack-a-penguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-14-whack-a-penguin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF0648D2C962199006A046E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BF0648F2C962199006A046E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				1BF0649C2C96219A006A046E /* LaunchScreen.storyboard */,
 				1BF064A52C9622D2006A046E /* whack.caf */,
 				1BF064A42C9622D2006A046E /* whackBad.caf */,
+				1B2192862C9A7BDE00D96C07 /* hitPinguin.sks */,
+				1B2192882C9A7F6700D96C07 /* pinguin.sks */,
 			);
 			path = "Project-14-whack-a-penguin";
 			sourceTree = "<group>";
@@ -133,9 +139,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B2192872C9A7BDE00D96C07 /* hitPinguin.sks in Resources */,
 				1BF064902C962199006A046E /* GameScene.sks in Resources */,
 				1BF064992C962199006A046E /* Base in Resources */,
 				1BF0649B2C96219A006A046E /* Assets.xcassets in Resources */,
+				1B2192892C9A7F6700D96C07 /* pinguin.sks in Resources */,
 				1BF0649E2C96219A006A046E /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

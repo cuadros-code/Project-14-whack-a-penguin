@@ -58,6 +58,11 @@ class GameScene: SKScene {
             if !whackSlot.isVisible { continue }
             if whackSlot.isHit { continue }
             
+            if let smokeParticle = SKEmitterNode(fileNamed: "hitPinguin"){
+                smokeParticle.position = location
+                addChild(smokeParticle)
+            }
+            
             if node.name == "charFriend" {
                 whackSlot.hit()
                 score -= 5
@@ -93,6 +98,13 @@ class GameScene: SKScene {
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
             addChild(gameOver)
+            
+            let gameScore = SKLabelNode(fontNamed: "Chalkduster")
+            gameScore.text = "Score: \(score)"
+            gameScore.position = CGPoint(x: 512, y: 310)
+            gameScore.fontSize = 36
+            gameScore.zPosition = 1
+            addChild(gameScore)
             
             return
         }
