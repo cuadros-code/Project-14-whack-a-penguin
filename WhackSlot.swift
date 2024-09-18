@@ -14,7 +14,7 @@ class WhackSlot: SKNode {
     var isVisible = false
     var isHit = false
     
-    // Crea el hueco, La mascara y el pinguino
+    // CONFIGURE SLOT AND ADD MASK TO HIDDEN PINGUIN
     func configure(at position: CGPoint){
         self.position = position
         
@@ -34,7 +34,7 @@ class WhackSlot: SKNode {
         addChild(cropNode)
     }
     
-    // Se mueve el pinguino sobre la mascara visible( SKCropNode )
+    // MOVE PINGUIN OVER MASK TO SHOW
     func show(hideTime: Double){
         if isVisible { return }
         
@@ -45,6 +45,7 @@ class WhackSlot: SKNode {
         isVisible = true
         isHit = false
         
+        // RANDOM GOOD - BAD PINGUIN
         if Int.random(in: 0...2) == 0 {
             charNode.texture = SKTexture(imageNamed: "penguinGood")
             charNode.name = "charFriend"
@@ -53,17 +54,20 @@ class WhackSlot: SKNode {
             charNode.name = "charEnemy"
         }
         
+        // HIDE PINGUIN AFTER TIME
         DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 3.5)) { [weak self] in
             self?.hide()
         }
     }
     
+    // HIDE PINGUIN
     func hide() {
         if !isVisible { return }
         charNode.run(SKAction.moveBy(x: 0, y: -80, duration: 0.05))
         isVisible = false
     }
     
+    // CREATE SEQUENCE WHEN PINGUIN IS TAPPED
     func hit(){
         isHit = true
         
